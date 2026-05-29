@@ -1,11 +1,11 @@
 import React from "react";
-import { IdentityView } from "./IdentityView.jsx";
-import { MemoryView } from "./MemoryView.jsx";
-import { BeeSimView } from "./BeeSimView.jsx";
-import { PatternView } from "./PatternView.jsx";
+
+import { IdentityView } from "../views/IdentityView.jsx";
+import { MemoryView } from "../views/MemoryView.jsx";
+import { BeeSimView } from "../views/BeeSimView.jsx";
+import { PatternView } from "../views/PatternView.jsx";
 
 export function Viewport({ active }) {
-  // Fallback if module or view is missing
   const safe = (component) => {
     try {
       return component;
@@ -24,16 +24,12 @@ export function Viewport({ active }) {
   switch (active) {
     case "identity":
       return safe(<IdentityView />);
-
     case "memory":
       return safe(<MemoryView />);
-
     case "beesim":
       return safe(<BeeSimView />);
-
     case "pattern":
       return safe(<PatternView />);
-
     default:
       return (
         <div className="module-root">
