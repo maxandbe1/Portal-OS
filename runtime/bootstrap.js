@@ -2,6 +2,7 @@ import { registerModule } from "./moduleRegistry.js";
 import { loadIdentityModule } from "../modules/identity/index.js";
 import { loadPatternModule } from "../modules/pattern/index.js";
 import { loadMemoryModule } from "../modules/memory/index.js";
+import { loadBeeSimModule } from "../modules/beesim/index.js";
 
 export function bootstrapPortal() {
   const runtime = {
@@ -14,17 +15,16 @@ export function bootstrapPortal() {
     }
   };
 
-  // Load modules AFTER runtime exists
   const identity = loadIdentityModule(runtime);
   const pattern = loadPatternModule(runtime);
   const memory = loadMemoryModule(runtime);
+  const beesim = loadBeeSimModule(runtime);
 
-  // Register modules
   registerModule("identity", { key: "identity", api: identity.api });
   registerModule("pattern", { key: "pattern", api: pattern.api });
   registerModule("memory", { key: "memory", api: memory.api });
+  registerModule("beesim", { key: "beesim", api: beesim.api });
 
-  // Expose runtime globally
   window.Portal = runtime;
   return runtime;
 }
