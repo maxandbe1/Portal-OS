@@ -3,7 +3,8 @@ import React from "react";
 const items = [
   { key: "identity", label: "Identity" },
   { key: "pattern", label: "Pattern" },
-  { key: "memory", label: "Memory" }
+  { key: "memory", label: "Memory" },
+  { key: "beesim", label: "Bee‑SIM" }
 ];
 
 export function NavRail({ current, onChange }) {
