@@ -1,24 +1,24 @@
 import React from "react";
 
-
 const items = [
   { key: "identity", label: "Identity" },
-  { key: "pattern", label: "Pattern" },
   { key: "memory", label: "Memory" },
-  { key: "beesim", label: "Bee‑SIM" }
+  { key: "beesim", label: "Bee‑SIM" },
+  { key: "pattern", label: "Pattern" },
+  { key: "inspector", label: "Inspector" }, // ← valid HERE
 ];
 
-export function NavRail({ current, onChange }) {
+export function NavRail({ active, onSelect }) {
   return (
     <div className="nav-rail">
       {items.map((item) => (
-        <button
+        <div
           key={item.key}
-          className={current === item.key ? "active" : ""}
-          onClick={() => onChange(item.key)}
+          className={`nav-item ${active === item.key ? "active" : ""}`}
+          onClick={() => onSelect(item.key)}
         >
           {item.label}
-        </button>
+        </div>
       ))}
     </div>
   );
