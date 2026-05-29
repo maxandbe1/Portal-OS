@@ -2,7 +2,8 @@ import React, { useEffect, useState } from "react";
 import { PrimaryBeeMark } from "../../symbols/bee/PrimaryBeeMark.jsx";
 import { SwarmLogicMark } from "../../symbols/bee/SwarmLogicMark.jsx";
 
-export function BeeSimView() {
+ export default function BeeSimView() {
+
  const [state, setState] = useState(null);
 
   useEffect(() => {
