@@ -1,11 +1,7 @@
 import { registerModule } from "./moduleRegistry.js";
 import { loadIdentityModule } from "../modules/identity/index.js";
 import { loadPatternModule } from "../modules/pattern/index.js";
-;
-
-const pattern = loadPatternModule(runtime);
-registerModule("pattern", { key: "pattern", api: pattern.api });
-
+import { loadMemoryModule } from "../modules/memory/index.js";
 
 export function bootstrapPortal() {
   const runtime = {
@@ -18,12 +14,17 @@ export function bootstrapPortal() {
     }
   };
 
+  // Load modules AFTER runtime exists
   const identity = loadIdentityModule(runtime);
   const pattern = loadPatternModule(runtime);
+  const memory = loadMemoryModule(runtime);
 
+  // Register modules
   registerModule("identity", { key: "identity", api: identity.api });
   registerModule("pattern", { key: "pattern", api: pattern.api });
+  registerModule("memory", { key: "memory", api: memory.api });
 
+  // Expose runtime globally
   window.Portal = runtime;
   return runtime;
 }
