@@ -5,6 +5,8 @@ export function Viewport({ current }) {
   return (
     <>
       {current === "identity" && <IdentityView />}
+      {current === "pattern" && <PatternView />}
+
     </>
   );
 }
