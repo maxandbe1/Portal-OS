@@ -123,3 +123,74 @@ body {
   padding: 6px 8px;
   color: #e5e7eb;
 }
+.pattern-add {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.pattern-add input {
+  flex: 1;
+  background: #020617;
+  border: 1px solid #111827;
+  border-radius: 6px;
+  padding: 6px 8px;
+  color: #e5e7eb;
+}
+
+.pattern-add button {
+  border-radius: 6px;
+  border: 1px solid #38bdf8;
+  background: #020617;
+  color: #38bdf8;
+  padding: 6px 10px;
+  cursor: pointer;
+  font-size: 12px;
+}
+
+.pattern-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.pattern-item {
+  border: 1px solid #111827;
+  border-radius: 8px;
+  padding: 8px 10px;
+}
+
+.pattern-label {
+  font-size: 13px;
+  margin-bottom: 6px;
+}
+
+.pattern-bar {
+  height: 6px;
+  border-radius: 999px;
+  background: #020617;
+  border: 1px solid #111827;
+  overflow: hidden;
+  margin-bottom: 6px;
+}
+
+.pattern-fill {
+  height: 100%;
+  background: #38bdf8;
+}
+
+.pattern-controls {
+  display: flex;
+  gap: 6px;
+}
+
+.pattern-controls button {
+  border-radius: 999px;
+  border: 1px solid #111827;
+  background: #020617;
+  color: #9ca3af;
+  font-size: 11px;
+  padding: 2px 8px;
+  cursor: pointer;
+}
+
