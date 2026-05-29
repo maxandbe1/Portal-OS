@@ -2,6 +2,8 @@ import React from "react";
 
 const items = [
   { key: "identity", label: "Identity" },
+  { key: "pattern", label: "Pattern" },
+  { key: "memory", label: "Memory" }
 ];
 
 export function NavRail({ current, onChange }) {
