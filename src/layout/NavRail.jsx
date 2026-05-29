@@ -1,5 +1,5 @@
 import React from "react";
-{ key: "inspector", label: "Inspector" }
+
 
 const items = [
   { key: "identity", label: "Identity" },
