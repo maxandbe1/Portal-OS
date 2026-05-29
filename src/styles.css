@@ -193,4 +193,75 @@ body {
   padding: 2px 8px;
   cursor: pointer;
 }
+.beesim-meta {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 12px;
+  color: #e5e7eb;
+  margin-bottom: 12px;
+}
+
+.beesim-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.beesim-item {
+  border: 1px solid #111827;
+  border-radius: 8px;
+  padding: 8px 10px;
+}
+
+.beesim-label {
+  font-size: 13px;
+  margin-bottom: 6px;
+}
+
+.beesim-bars {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  margin-bottom: 6px;
+}
+
+.beesim-bar span {
+  font-size: 11px;
+  color: #9ca3af;
+}
+
+.beesim-track {
+  height: 6px;
+  border-radius: 999px;
+  background: #020617;
+  border: 1px solid #111827;
+  overflow: hidden;
+}
+
+.beesim-fill.energy {
+  height: 100%;
+  background: #facc15;
+}
+
+.beesim-fill.focus {
+  height: 100%;
+  background: #38bdf8;
+}
+
+.beesim-controls {
+  display: flex;
+  gap: 6px;
+}
+
+.beesim-controls button {
+  border-radius: 999px;
+  border: 1px solid #111827;
+  background: #020617;
+  color: #e5e7eb;
+  font-size: 11px;
+  padding: 2px 8px;
+  cursor: pointer;
+}
+
 
