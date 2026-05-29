@@ -1,6 +1,11 @@
 import { registerModule } from "./moduleRegistry.js";
 import { loadIdentityModule } from "../modules/identity/index.js";
 import { loadPatternModule } from "../modules/pattern/index.js";
+import { loadPatternModule } from "../modules/pattern/index.js";
+
+const pattern = loadPatternModule(runtime);
+registerModule("pattern", { key: "pattern", api: pattern.api });
+
 
 export function bootstrapPortal() {
   const runtime = {
