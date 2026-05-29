@@ -2,7 +2,8 @@ import React from "react";
 
 import { IdentityView } from "../views/IdentityView.jsx";
 import { MemoryView } from "../views/MemoryView.jsx";
-import { BeeSimView } from "../views/BeeSimView.jsx";
+import BeeSimView from "../modules/beesim/BeeSimView.jsx";
+
 import { PatternView } from "../views/PatternView.jsx";
 
 export function Viewport({ active }) {
