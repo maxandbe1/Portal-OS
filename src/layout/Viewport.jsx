@@ -1,36 +1,24 @@
 import React from "react";
 
-import { IdentityView } from "../views/IdentityView.jsx";
-import { MemoryView } from "../views/MemoryView.jsx";
+import IdentityView from "../views/IdentityView.jsx";
+import MemoryView from "../views/MemoryView.jsx";
+import PatternView from "../views/PatternView.jsx";
 import BeeSimView from "../modules/beesim/BeeSimView.jsx";
 
-import { PatternView } from "../views/PatternView.jsx";
-
-export function Viewport({ active }) {
-  const safe = (component) => {
-    try {
-      return component;
-    } catch (e) {
-      return (
-        <div className="module-root">
-          <h1>Module Error</h1>
-          <p className="module-subtitle">
-            This module failed to load or is not registered.
-          </p>
-        </div>
-      );
-    }
-  };
-
+export default function Viewport({ active }) {
   switch (active) {
     case "identity":
-      return safe(<IdentityView />);
+      return <IdentityView />;
+
     case "memory":
-      return safe(<MemoryView />);
-    case "beesim":
-      return safe(<BeeSimView />);
+      return <MemoryView />;
+
     case "pattern":
-      return safe(<PatternView />);
+      return <PatternView />;
+
+    case "beesim":
+      return <BeeSimView />;
+
     default:
       return (
         <div className="module-root">
