@@ -3,7 +3,7 @@ import { PrimaryBeeMark } from "../../symbols/bee/PrimaryBeeMark.jsx";
 import { SwarmLogicMark } from "../../symbols/bee/SwarmLogicMark.jsx";
 
 export function BeeSimView() {
-  const [state, setState] = useState(null);
+ const [state, setState] = useState(null);
 
   useEffect(() => {
     const mod = window.Portal.modules.beesim;
